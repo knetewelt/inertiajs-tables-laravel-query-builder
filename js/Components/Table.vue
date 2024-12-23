@@ -115,7 +115,7 @@
       >
         <TableWrapper :class="{ 'mt-3': !hasOnlyData }">
           <slot name="table">
-            <table class="min-w-full divide-y divide-gray-200 bg-white">
+            <table class="table table-lg table-border">
               <thead class="bg-gray-50">
                 <slot
                   name="head"
@@ -133,7 +133,7 @@
                 </slot>
               </thead>
 
-              <tbody class="bg-white divide-y divide-gray-200">
+              <tbody>
                 <slot
                   name="body"
                   :show="show"
