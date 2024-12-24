@@ -116,7 +116,7 @@
         <TableWrapper :class="{ 'mt-3': !hasOnlyData }">
           <slot name="table">
             <table class="table table-lg table-border">
-              <thead class="bg-gray-50">
+              <thead>
                 <slot
                   name="head"
                   :show="show"
@@ -143,7 +143,7 @@
                     :key="`table-${name}-row-${key}`"
                     class=""
                     :class="{
-                      'bg-gray-50': striped && key % 2,
+                      'bg-gray-50 dark:bg-coal-200': striped && key % 2,
                       'hover:bg-gray-100': striped,
                       'hover:bg-gray-50': !striped
                     }"

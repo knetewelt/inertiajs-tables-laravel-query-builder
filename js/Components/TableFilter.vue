@@ -33,7 +33,7 @@
         v-for="(filter, key) in filters"
         :key="key"
       >
-        <h3 class="text-xs uppercase tracking-wide bg-gray-100 p-3">
+        <h3 class="text-xs uppercase tracking-wide bg-coal-100 p-3 text-dark dark:text-white">
           {{ filter.label }}
         </h3>
         <div class="p-2">
@@ -41,7 +41,7 @@
             v-if="filter.type === 'select'"
             :name="filter.key"
             :value="filter.value"
-            class="block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm text-sm border-gray-300 rounded-md"
+            class="w-full input input-sm"
             @change="onFilterChange(filter.key, $event.target.value)"
           >
             <option
